@@ -5,22 +5,22 @@ Class Connection
     private $server = "mysql:host=localhost;dbname=becode";
     private $user = "username";
     private $pass = "test";
-    private $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
-    protected $con;
+    protected $pdo;
 
-    //methods
+
     public function openConnection()
     {
-        try {
-            $this->con = new PDO($this->server, $this->user, $this->pass, $this->options);
-            return $this->con;
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
+        $pdo = new PDO($this->server, $this->user, $this->pass);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        return $pdo;
     }
+
 
     public function closeConnection()
     {
-        $this->con = null;
+        $this->pdo = null;
     }
 }
+
+
