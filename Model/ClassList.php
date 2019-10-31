@@ -1,5 +1,5 @@
 <?php
-require "Model/Connection.php";
+require "../Model/Connection.php";
 ?>
 
 
@@ -13,6 +13,10 @@ require "Model/Connection.php";
     </thead>
 
     <?php
+
+
+
+
     $connection = new Connection();
     $sql = $connection->openConnection()->query('SELECT * FROM ClassRoom ')->fetchAll();
     foreach ($sql as $ticket) {
@@ -40,6 +44,6 @@ require "Model/Connection.php";
         <title>Home</title>
     </head>
     <body>
-    <a class="btn btn-outline-danger m-4" href="" role="button">Add Student</a>
+    <a class="btn btn-outline-danger m-4" href="" role="button">Add Class</a>
     </body>
     </html>
