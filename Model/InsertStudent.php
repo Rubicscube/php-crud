@@ -45,7 +45,7 @@ if (isset($_POST['nameF'], $_POST['email'], $_POST['classes'])) {
             <option value="4">waffel</option>
         </select>
         <button type="submit" name="submit" class="btn btn-primary">POST</button>
-        <a class="btn btn-outline-primary" href="/index.php" role="button">SHOW USERS</a>
+        <a class="btn btn-outline-primary" href="../index.php" role="button">SHOW USERS</a>
     </form>
 </div>
 </body>

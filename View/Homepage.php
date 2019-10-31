@@ -13,12 +13,12 @@
     <title>Becode Database</title>
 </head>
 <body>
-    <?php require 'includes/header.php'?>
-    <section>
-        <a class="btn btn-outline-danger m-4" href="../Controller/Studentcontroller.php" role="button">Student List</a>
-        <a class="btn btn-outline-danger m-4" href="Classcontroller.php" role="button">Class List</a>
-        <a class="btn btn-outline-danger m-4" href="Teachercontroller.php" role="button">Teacher List</a>
-    </section>
-    <?php require 'includes/footer.php'?>
+<?php require 'includes/header.php' ?>
+<section>
+    <a class="btn btn-outline-danger m-4" href="../Model/StudentList.php" role="button">Student List</a>
+    <a class="btn btn-outline-danger m-4" href="Classcontroller.php" role="button">Class List</a>
+    <a class="btn btn-outline-danger m-4" href="Teachercontroller.php" role="button">Teacher List</a>
+</section>
+<?php require 'includes/footer.php' ?>
 </body>
 </html>
