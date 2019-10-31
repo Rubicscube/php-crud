@@ -34,7 +34,7 @@ if (isset($_POST['nameF'], $_POST['email'], $_POST['classes'])) {
 </head>
 <body>
 <div class="container">
-    <h1 class="jumbotron-heading">Student Registration</h1>
+    <h1 class="jumbotron-heading">Teacher Registration</h1>
     <form method="post">
         <input name="nameF" class="form-control mb-1" placeholder="First Name" required>
         <input class="form-control mb-1" type="email" placeholder="Email" name="email" required>
@@ -45,7 +45,7 @@ if (isset($_POST['nameF'], $_POST['email'], $_POST['classes'])) {
             <option value="4">waffel</option>
         </select>
         <button type="submit" name="submit" class="btn btn-primary">POST</button>
-        <a class="btn btn-outline-primary" href="../index.php" role="button">SHOW USERS</a>
+        <a class="btn btn-outline-primary" href="../index.php" role="button">SHOW TEACHER LIST</a>
     </form>
 </div>
 </body>

@@ -10,6 +10,8 @@ require "../Model/Connection.php";
         <th>Teacher Name</th>
         <th>Teacher Email</th>
         <th>Teacher to class FK</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     </thead>
 
@@ -24,6 +26,8 @@ require "../Model/Connection.php";
     <td>{$ticket['Name']}</td>
     <td>{$ticket['Email']}</td>
     <td>{$ticket['class']}</td>
+    <td><a href='edit.php?id=".$ticket['Id']."'>Edit</a></td>
+    <td><a href='DeleteT.php?id=".$ticket['Id']."'>Delete</a></td>
    </tr>\n </tbody>";
     }
     ?>
@@ -43,6 +47,8 @@ require "../Model/Connection.php";
         <title>Student</title>
     </head>
     <body>
-    <a class="btn btn-outline-danger m-4" href="InsertStudent.php" role="button">Add Teacher</a>
+    <h1 class="jumbotron-heading">Teacher List</h1>
+    <a class="btn btn-outline-success m-4" href="InsertTeacher.php" role="button">Add Teacher</a>
+    <a class="btn btn-outline-primary m-2" href="../index.php" role="button">Home</a>
     </body>
     </html>

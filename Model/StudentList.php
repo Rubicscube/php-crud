@@ -27,7 +27,7 @@ require "../Model/Connection.php";
     <td>{$ticket['Email']}</td>
     <td>{$ticket['class']}</td>
     <td><a href='edit.php?id=".$ticket['Id']."'>Edit</a></td>
-    <td><a href='Delete.php?id=".$ticket['Id']."'>Delete</a></td>
+    <td><a href='DeleteS.php?id=".$ticket['Id']."'>Delete</a></td>
    </tr>\n </tbody>";
     }
     ?>
@@ -47,6 +47,8 @@ require "../Model/Connection.php";
         <title>Student</title>
     </head>
     <body>
-    <a class="btn btn-outline-danger m-4" href="InsertStudent.php" role="button">Add Student</a>
+    <h1 class="jumbotron-heading">Student List</h1>
+    <a class="btn btn-outline-success m-4" href="InsertStudent.php" role="button">Add Student</a>
+    <a class="btn btn-outline-primary m-2" href="../index.php" role="button">Home</a>
     </body>
     </html>

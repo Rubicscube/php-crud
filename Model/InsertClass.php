@@ -1,18 +1,18 @@
 <?php
+
 require "Connection.php";
 $nameF = $_POST['nameF'];
-$mail = $_POST['email'];
-$Language = $_POST['classes'];
+$loc = $_POST['location'];
 
-if (isset($_POST['nameF'], $_POST['email'], $_POST['classes'])) {
+
+if (isset($_POST['nameF'], $_POST['location'])) {
 // Create connection
     $connection = new Connection();
     $sql = $connection->openConnection()->prepare("
-        INSERT INTO Student (Name, Email, class)
-        VALUES (:first_name, :Email, :class)");
+        INSERT INTO ClassRoom (Name, Location)
+        VALUES (:first_name, :location)");
     $sql->bindParam(':first_name', $nameF);
-    $sql->bindParam(':Email', $mail);
-    $sql->bindParam(':class', $Language);
+    $sql->bindParam(':location', $loc);
     $sql->execute();
 }
 ?>
@@ -34,18 +34,12 @@ if (isset($_POST['nameF'], $_POST['email'], $_POST['classes'])) {
 </head>
 <body>
 <div class="container">
-    <h1 class="jumbotron-heading">Student Registration</h1>
+    <h1 class="jumbotron-heading">Add Classroom</h1>
     <form method="post">
-        <input name="nameF" class="form-control mb-1" placeholder="First Name" required>
-        <input class="form-control mb-1" type="email" placeholder="Email" name="email" required>
-        <select class="form-control mb-1" name="classes">
-            <option value="1">Lamarr</option>
-            <option value="2">Giertz</option>
-            <option value="3">waterzooi</option>
-            <option value="4">waffel</option>
-        </select>
-        <button type="submit" name="submit" class="btn btn-primary">POST</button>
-        <a class="btn btn-outline-primary" href="../Model/StudentList.php" role="button">SHOW STUDENT LIST</a>
+        <input name="nameF" class="form-control mb-1" placeholder="class name" required>
+        <input class="form-control mb-1" type="text" placeholder="class location" name="location" required>
+        <button type="submit" name="submit" class="btn btn-primary mb-4">POST</button>
+        <a class="btn btn-outline-primary mb-4" href="../Model/ClassList.php" role="button">SHOW CLASS LIST</a>
     </form>
 </div>
 </body>

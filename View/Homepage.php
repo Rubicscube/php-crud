@@ -14,10 +14,12 @@
 </head>
 <body>
 <?php require 'includes/header.php' ?>
-<section>
+<section align="center">
+
     <a class="btn btn-outline-danger m-4" href="../Model/StudentList.php" role="button">Student List</a>
     <a class="btn btn-outline-danger m-4" href="../Model/ClassList.php" role="button">Class List</a>
     <a class="btn btn-outline-danger m-4" href="../Model/TeacherList.php" role="button">Teacher List</a>
+
 </section>
 <?php require 'includes/footer.php' ?>
 </body>
