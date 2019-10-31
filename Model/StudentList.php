@@ -10,6 +10,8 @@ require "../Model/Connection.php";
         <th>Student Name</th>
         <th>Student Email</th>
         <th>Student to class FK</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     </thead>
 
@@ -24,6 +26,8 @@ require "../Model/Connection.php";
     <td>{$ticket['Name']}</td>
     <td>{$ticket['Email']}</td>
     <td>{$ticket['class']}</td>
+    <td><a href='edit.php?id=".$ticket['Id']."'>Edit</a></td>
+    <td><a href='Delete.php?id=".$ticket['Id']."'>Delete</a></td>
    </tr>\n </tbody>";
     }
     ?>
